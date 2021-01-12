@@ -1,17 +1,25 @@
-import { palindrome } from '../src/palindrome'
+import palindrome from '../src/palindrome'
 
-describe('palindrome', () => {
-  let str: string
-
+describe('Palindrome', () => {
   it('should return true if the word ("EYE") is a palindrome', () => {
-    str = 'eye'
+    // given
+    const str = 'eye'
 
-    expect(palindrome(str)).toBe(true)
+    // when
+    const result = true
+
+    // then
+    expect(palindrome.process(str)).toBe(true)
   })
 
   it('should still return true even if the word ("_EYE") has a special character', () => {
-    str = '_eye'
+    // given
+    const str = '_eye'
 
-    expect(palindrome(str)).toBe(true)
+    // when
+    const result = true
+
+    // then
+    expect(palindrome.process(str)).toBe(result)
   })
 })
