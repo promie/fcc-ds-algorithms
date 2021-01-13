@@ -1,6 +1,6 @@
 const normalise = (str: string): string => {
   const normaliseStr = str.replace(/[^a-zA-Z ]/g, '')
-  const textWithoutSpaces = normaliseStr.replace(' ', '')
+  const textWithoutSpaces = normaliseStr.replace(/\s/g, '')
 
   return textWithoutSpaces
 }
