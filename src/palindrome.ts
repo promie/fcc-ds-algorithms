@@ -1,8 +1,8 @@
 const normalise = (str: string): string => {
-  const normaliseStr = str.replace(/[^a-zA-Z ]/g, '')
+  const normaliseStr = str.replace(/[^a-zA-Z0-9 ]/g, '')
   const textWithoutSpaces = normaliseStr.replace(/\s/g, '')
 
-  return textWithoutSpaces
+  return textWithoutSpaces.toLowerCase()
 }
 
 const process = (str: string): boolean => {

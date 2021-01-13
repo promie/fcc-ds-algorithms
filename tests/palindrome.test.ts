@@ -18,7 +18,7 @@ describe('Palindrome', () => {
       const input = '@#$@!EYE!@#@!@@@!'
 
       // when
-      const result = 'EYE'
+      const result = 'eye'
 
       //then
       expect(palindrome.normalise(input)).toBe(result)
@@ -45,6 +45,17 @@ describe('Palindrome', () => {
       // then
       expect(palindrome.normalise(input)).toBe(result)
     })
+
+    it('should make input string to be all lower cases', () => {
+      // given
+      const input = 'MaaAm'
+
+      // when
+      const result = 'maaam'
+
+      // then
+      expect(palindrome.normalise(input)).toBe(result)
+    })
   })
 
   describe('process()', () => {
@@ -56,7 +67,7 @@ describe('Palindrome', () => {
       const result = true
 
       // then
-      expect(palindrome.process(input)).toBe(true)
+      expect(palindrome.process(input)).toBe(result)
     })
 
     it('should still return true even if the word ("_EYE") has a special character', () => {
@@ -84,6 +95,28 @@ describe('Palindrome', () => {
     it('should return true if the given word of "never odd or even" is a palindrome', () => {
       // given
       const input = 'never odd or even'
+
+      // when
+      const result = true
+
+      // then
+      expect(palindrome.process(input)).toBe(result)
+    })
+
+    it('should return false if the given word of "1 eye for an 1 eye." is not a palindrome', () => {
+      // given
+      const input = '1 eye for of 1 eye.'
+
+      // when
+      const result = false
+
+      // then
+      expect(palindrome.process(input)).toBe(result)
+    })
+
+    it('should return true if the given word of "My age is 0, 0 si ega ym." is a palindrome', () => {
+      // given
+      const input = 'My age is 0, 0 si ega ym.'
 
       // when
       const result = true
