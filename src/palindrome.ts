@@ -1,8 +1,15 @@
-const process = (str: string): boolean => {
-  const normalizeStr = str.replace(/[^a-zA-Z ]/g, '')
-  const reversedString = normalizeStr.split('').reverse().join('')
+const normalise = (str: string): string => {
+  const normaliseStr = str.replace(/[^a-zA-Z ]/g, '')
+  const textWithoutSpaces = normaliseStr.replace(' ', '')
 
-  return normalizeStr === reversedString
+  return textWithoutSpaces
 }
 
-export default { process }
+const process = (str: string): boolean => {
+  const normaliseStr = normalise(str)
+  const reversedString = normaliseStr.split('').reverse().join('')
+
+  return normaliseStr === reversedString
+}
+
+export default { process, normalise }
