@@ -276,5 +276,16 @@ describe('RomanNumeralConverter', () => {
       // then
       expect(romanNumeralConverter.convertToRoman(input)).toBe(result)
     })
+
+    it('converts the number 3999 to correct roman numeral of MMMCMXCIX', () => {
+      // given
+      const input = 3999
+
+      // when
+      const result = 'MMMCMXCIX'
+
+      // then
+      expect(romanNumeralConverter.convertToRoman(input)).toBe(result)
+    })
   })
 })
