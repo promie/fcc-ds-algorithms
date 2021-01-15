@@ -32,6 +32,10 @@ const convertToRoman = (num: number): string => {
 
   let roman: string[] = []
 
+  if (num > 3999) {
+    throw new Error('The maximum number for this conversion is 3999')
+  }
+
   for (let i = 0; i < numericalValueMapArr.length; i++) {
     while (numericalValueMapArr[i] <= num) {
       roman.push(romanNumeralMapArr[i])

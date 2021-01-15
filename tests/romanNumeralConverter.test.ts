@@ -2,6 +2,19 @@ import romanNumeralConverter from '../src/romanNumeralConverter'
 
 describe('RomanNumeralConverter', () => {
   describe('covertToRoman()', () => {
+    it('throws an error if the input number is greater than 3999', () => {
+      // given
+      const input = 4000
+
+      // when
+      const error = 'The maximum number for this conversion is 3999'
+
+      // then
+      expect(function () {
+        romanNumeralConverter.convertToRoman(input)
+      }).toThrow(error)
+    })
+
     it('converts the number 2 to correct roman numeral of II', () => {
       // given
       const input = 2
