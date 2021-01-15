@@ -36,12 +36,12 @@ const convertToRoman = (num: number): string => {
     throw new Error('The maximum number for this conversion is 3999')
   }
 
-  for (let i = 0; i < numericalValueMapArr.length; i++) {
-    while (numericalValueMapArr[i] <= num) {
-      roman.push(romanNumeralMapArr[i])
-      num -= numericalValueMapArr[i]
+  numericalValueMapArr.map((n, idx) => {
+    while (n <= num) {
+      roman.push(romanNumeralMapArr[idx])
+      num -= n
     }
-  }
+  })
 
   return roman.join('')
 }
