@@ -1,6 +1,6 @@
 import caesarsCipher from '../src/caesarsCipher'
 
-describe('CaesarsCipher', () => {
+describe.only('CaesarsCipher', () => {
   describe('rot13()', () => {
     it('decodes and shift each letter by 13 places - SERR PBQR PNZC should decode to FREE CODE CAMP', () => {
       const input = 'SERR PBQR PNZC'
