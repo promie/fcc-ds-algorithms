@@ -1,46 +1,23 @@
 const rot13 = (str: string): string => {
-  const alphabet: string[] = [
-    'A',
-    'B',
-    'C',
-    'D',
-    'E',
-    'F',
-    'G',
-    'H',
-    'I',
-    'J',
-    'K',
-    'L',
-    'M',
-    'N',
-    'O',
-    'P',
-    'Q',
-    'R',
-    'S',
-    'T',
-    'U',
-    'V',
-    'W',
-    'X',
-    'Y',
-    'Z',
-  ]
+  let accumulator = ''
 
-  let accumulator: string
+  str
+    .toUpperCase()
+    .split('')
+    .map((letter) => {
+      const asciiCode = letter.charCodeAt(0)
+      const A = 65
+      const M = 77
+      const Z = 90
 
-  accumulator = ''
-
-  str.split('').map((letter) => {
-    if (alphabet.includes(letter)) {
-      alphabet.indexOf(letter) > 11
-        ? (accumulator += alphabet[alphabet.indexOf(letter) - 13])
-        : (accumulator += alphabet[alphabet.indexOf(letter) + 13])
-    } else {
-      accumulator += letter
-    }
-  })
+      if (asciiCode >= A && asciiCode <= Z) {
+        asciiCode > M
+          ? (accumulator += String.fromCharCode(asciiCode - 13))
+          : (accumulator += String.fromCharCode(asciiCode + 13))
+      } else {
+        accumulator += letter
+      }
+    })
 
   return accumulator
 }
