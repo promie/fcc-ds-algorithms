@@ -1,4 +1,4 @@
-import romanNumeralConverter from '../src/romanNumeralConverter'
+import romanNumeralConverter from '../../src/advanced/romanNumeralConverter'
 
 describe('RomanNumeralConverter', () => {
   describe('covertToRoman()', () => {

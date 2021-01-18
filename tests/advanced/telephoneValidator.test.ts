@@ -1,4 +1,4 @@
-import telephoneValidator from '../src/telephoneValidator'
+import telephoneValidator from '../../src/advanced/telephoneValidator'
 
 describe('TelephoneCheck', () => {
   describe('telephoneCheck()', () => {

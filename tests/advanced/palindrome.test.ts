@@ -1,4 +1,4 @@
-import palindrome from '../src/palindrome'
+import palindrome from '../../src/advanced/palindrome'
 
 describe('Palindrome', () => {
   describe('normalise()', () => {

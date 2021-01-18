@@ -1,4 +1,4 @@
-import caesarsCipher from '../src/caesarsCipher'
+import caesarsCipher from '../../src/advanced/caesarsCipher'
 
 describe('CaesarsCipher', () => {
   describe('rot13()', () => {

@@ -1,4 +1,4 @@
-import cashRegister from '../src/cashRegister'
+import cashRegister from '../../src/advanced/cashRegister'
 
 describe.only('CashRegister', () => {
   describe('checkCashRegister()', () => {

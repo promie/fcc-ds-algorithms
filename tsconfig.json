@@ -15,5 +15,18 @@
     "rootDir": "./",
     "sourceMap": true
   },
-  "include": ["./src/*.ts", "./tests/*.ts"]
+  "include": [
+    "./src/*.ts",
+    "./tests/*.ts",
+    "tests/advanced/telephoneValidator.test.ts",
+    "tests/advanced/romanNumeralConverter.test.ts",
+    "tests/advanced/palindrome.test.ts",
+    "tests/advanced/cashRegister.test.ts",
+    "tests/advanced/caesarsCipher.test.ts",
+    "src/advanced/telephoneValidator.ts",
+    "src/advanced/romanNumeralConverter.ts",
+    "src/advanced/palindrome.ts",
+    "src/advanced/cashRegister.ts",
+    "src/advanced/caesarsCipher.ts"
+  ]
 }
