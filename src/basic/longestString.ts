@@ -1,5 +1,5 @@
 const findLongestWordLength = (str: string): number => {
-  return 0
+  return Math.max(...str.split(' ').map((s) => s.length))
 }
 
 export default { findLongestWordLength }
