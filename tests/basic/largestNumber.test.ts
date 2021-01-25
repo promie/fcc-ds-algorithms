@@ -1,6 +1,6 @@
 import largestNumber from '../../src/basic/largestNumber'
 
-describe.only('largestNumber', () => {
+describe('largestNumber', () => {
   describe('largestOfFour()', () => {
     let inputArr: number[][]
     let result: number[]
