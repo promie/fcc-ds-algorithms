@@ -1,6 +1,6 @@
 import longestString from '../../src/basic/longestString'
 
-describe.only('longestString', () => {
+describe('longestString', () => {
   describe('findLongestWordLength()', () => {
     let inputString: string
     let result: number
