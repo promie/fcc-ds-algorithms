@@ -1,7 +1,7 @@
 import sliceAndSplice from '../../src/basic/sliceAndSplice'
 import { InputArray, Result } from '../../src/basic/sliceAndSplice'
 
-describe.only('SliceAndSplice', () => {
+describe('SliceAndSplice', () => {
   let inputArrOne: InputArray
   let inputArrTwo: InputArray
   let inputIndex: number
