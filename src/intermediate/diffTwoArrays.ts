@@ -1,7 +1,7 @@
-export type InputArray = number[] | string[]
-
-const diffArray = (arr1: InputArray, arr2: InputArray): any[] => {
-  return arr1.filter((x) => arr2.indexOf(x) === -1)
+const diffArray = (arr1: any[], arr2: any[]): any[] => {
+  return arr1
+    .concat(arr2)
+    .filter((item) => !arr1.includes(item) || !arr2.includes(item))
 }
 
 export default { diffArray }
