@@ -1,6 +1,6 @@
 import diffTwoArrays from '../../src/intermediate/diffTwoArrays'
 
-describe.only('DiffTwoArrays', () => {
+describe('DiffTwoArrays', () => {
   describe('diffArray()', () => {
     let inputArr1: any[]
     let inputArr2: any[]
